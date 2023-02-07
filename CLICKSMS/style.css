@@ -25,29 +25,26 @@ img {
   /* colors */
   --hue: 159;
   /* HSL color mode */
-  --brand-blue: #26477c; 
+  --brand-blue: #26477c;
   --hover-brand-blue: #0d3a83;
-  --brand-blue-light: #47b2e6;   
+  --brand-blue-light: #47b2e6;
   --gray-paragraph: #384633;
 
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
-  --text-color-light: hsl(0 0% 98%); 
-  --body-color: #F7F7F7;
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: #f7f7f7;
 
   /* fonts */
   --title-font: 4rem;
   --secondary: 2.4rem;
   --subtitle-font: 1.6rem;
 
-  --title-font-size: 2.4rem;
-  --secondary-font: 1.8rem;
-  --subtitle-font-size: 1.6rem;
+  --title-font-size: 2.2rem;
+  --secondary-font: 1.6rem;
+  --subtitle-font-size: 1.2rem;
 
-
-  --margin:2.4rem;
-
-
+  --margin: 2.4rem;
 }
 
 /*===  BASE ============================ */
@@ -59,13 +56,30 @@ body {
   font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .title {
-  font-size: var( --title-font-size);
+  font-size: var(--title-font-size);
   color: var(--brand-blue);
-  margin-bottom: var( --margin);
+  margin-bottom: var(--margin);
+}
+
+/* header */
+.header {
+  color: var(--brand-blue);
+}
+
+.header h3 {
+  margin-bottom: var(--margin);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.header h1 {
+  margin-bottom: var(--margin);
+  font-size: 2.8rem;
 }
 
 .button {
@@ -76,7 +90,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 1rem;
-  font: 500 1rem var( --secondary-font);
+  font: 500 1rem var(--secondary-font);
   transition: background 0.3s;
   text-transform: uppercase;
 }
@@ -94,11 +108,14 @@ body {
   );
 }
 
-
 /*====  LAYOUT ============================ */
-.container {
+.wrapper {
+  width: min(55rem, 100%);
+
   margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-inline: auto;
+
+  padding-inline: 1.5rem;
 }
 
 .section {
@@ -117,7 +134,7 @@ body {
   width: 100%;
 }
 
-#header .logoazul{
+#header .logoazul {
   display: flex;
   width: 9rem;
 }
@@ -127,18 +144,39 @@ body {
   background-color: var(--brand-blue);
 }
 
-#header.scroll .logoazul img{
+#header.scroll .logoazul img {
   display: none;
 }
 
-#header .logo img{
-  display: none;  
+#header .logo img {
+  display: none;
 }
 
-#header.scroll .logo img{
+#header.scroll .logo img {
   display: flex;
   width: 9rem;
-} 
+}
+
+/* icon-check */
+.details-check li {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  gap: 1rem;
+  color: var(--gray-paragraph);
+  text-align: left;
+}
+
+.details-check img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* paragraph */
+.paragraph {
+  color: var(--gray-paragraph);
+  margin-bottom: var(--margin);
+}
 
 /*====  NAVIGATION ============================ */
 nav {
@@ -164,7 +202,7 @@ nav ul li a.active {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: var(--body-color);
@@ -188,9 +226,9 @@ nav .menu {
   transition: 0.2s;
 }
 
-.title-menu{
- color: var(--body-color);
- font-size: var(--subtitle-font-size);
+.title-menu {
+  color: var(--body-color);
+  font-size: var(--subtitle-font-size);
 }
 
 nav .menu ul {
@@ -223,7 +261,7 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
-nav.show .menu .button{
+nav.show .menu .button {
   background-color: var(--body-color);
   color: var(--brand-blue);
   font-weight: 700;
@@ -257,7 +295,7 @@ nav.show div.icon-close {
 /*====  HOME ============================ */
 #home {
   overflow: hidden;
-  height: 100vh ;
+  height: 100vh;
 }
 
 #home .container {
@@ -283,12 +321,12 @@ nav.show div.icon-close {
   margin-bottom: var(--margin);
 }
 
-/*====  ABOUT ============================ */
+/*====  SOBRE ============================ */
 #about {
   background: white;
 }
 
-#about .container {
+#about .wrapper {
   margin: 0;
 }
 
@@ -296,14 +334,37 @@ nav.show div.icon-close {
   position: relative;
 }
 
-#about .text {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+#about p {
+  margin-bottom: var(--margin);
 }
 
-/*====  SOBRE ============================ */
+#about p span {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+#about img {
+  margin-bottom: var(--margin);
+}
 
 /*====  SAIBA COMO ============================ */
+#how .header .paragraph {
+  text-align: center;
+  color: var(--gray-paragraph);
+  margin-bottom: var(--margin);
+}
+
+#how .cards {
+  background-color: red;
+}
+
+#how .card {
+  background-color: yellow;
+}
+
+#how .details-check{
+margin-bottom: var(--margin);
+}
 
 /*====  PERGUNTAS FREQUENTES ============================ */
 /*====  FOOTER ============================ */
