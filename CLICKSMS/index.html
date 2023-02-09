@@ -29,21 +29,21 @@
     <header id="header">
       <nav class="wrapper">
         <div>
-          <a class="logoazul">
+          <a href="#home" class="logoazul">
             <img
               src="assets/fotos/logo.png"
               alt="Logo principal do clicksms azul"
           /></a>
-          <a class="logo"> <img src="assets/fotos/logo-white.png" /></a>
+          <a href="#home" class="logo"> <img src="assets/fotos/logo-white.png" /></a>
         </div>
         <!-- menu -->
         <div class="menu">
           <ul class="grid">
             <li><a class="title-menu" href="#home">Início</a></li>
             <li><a class="title-menu" href="#about">Sobre</a></li>
-            <li><a class="title-menu" href="#services">Saiba Como</a></li>
+            <li><a class="title-menu" href="#how">Saiba Como</a></li>
             <li>
-              <a class="title-menu" href="#testimonials"
+              <a class="title-menu" href="#faq"
                 >Perguntas Frequentes</a
               >
             </li>
@@ -60,14 +60,18 @@
       <!-- HOME -->
       <section class="section" id="home">
         <div class="wrapper">
-          <div class="image"></div>
+          <div class="image"> 
+            <img src="assets/fotos/artes/principal.png" alt=""> 
+          </div>
+          
           <div class="text">
-            <h2 class="title">Ativação segura em menos de 2 minutos</h2>
+            <h1 class="title">Ativação segura em 
+              <span>2Clicks</span> </h1>
             <p class="paragraph">
               Receba SMS de Ativação de qualquer aplicativo e qualquer país em
               poucos segundos, sem a necessidade de ativar chips.
             </p>
-            <a class="button" href="#">compre agora seu chip virtual</a>
+            <a class="button pulse" href="#">compre agora seu chip virtual</a>
           </div>
         </div>
       </section>
@@ -79,7 +83,7 @@
         <div class="wrapper">
           <div class="header">
             <h3>sobre nós</h3>
-            <h1>Entenda o que fazemos</h1>
+            <h1 class="title">Entenda o que fazemos</h1>
           </div>
           <div class="details">
             <p class="paragraph">
@@ -90,49 +94,56 @@
               podem obter seus chips assim que concluírem suas transações,
               economizando tempo e esforço.
             </p>
-            <img src="assets/fotos/foto.png" alt="" />
+            <img src="assets/fotos/artes/mulher.png" alt="" />
           </div>
-          <div>
-            <div class="header">
-              <h1>Porque nossos clientes nos escolheram?</h1>
-            </div>
-            <div class="details">
-              <ul class="details-check">
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Melhores Preços de Todos Painéis</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Painel mais Rápido do Mercado</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Melhor suporte técnico especializado</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Serviços e Números do Mundo Todo</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Sms Recebido mais rápido</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Reembolso automático se não chegar o SMS</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Saldo automático no PIX</p>
-                </li>
-                <li>
-                  <img src="assets/fotos/icons/check.png" alt="" />
-                  <p>Ativação totalmente online</p>
-                </li>
-              </ul>
-            </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- MOTIVOS -->
+      <section class="section" id="motivos">
+        <div class="wrapper">
+          <div class="header">
+            <h1>Porque nossos clientes nos escolheram?</h1>
           </div>
+          <div class="details">
+            <ul class="details-check">
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Melhores Preços de Todos Painéis</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Painel mais Rápido do Mercado</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Melhor suporte técnico especializado</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Serviços e Números do Mundo Todo</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Sms Recebido mais rápido</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Reembolso automático se não chegar o SMS</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Saldo automático no PIX</p>
+              </li>
+              <li>
+                <img src="assets/fotos/icons/check.png" alt="" />
+                <p>Ativação totalmente online</p>
+              </li>
+            </ul>
+          </div>
+          <img src="assets/fotos/artes/homem2.png" alt="">
         </div>
       </section>
 
@@ -167,30 +178,50 @@
               </ul>
             </div>
             <div class="cards">
-              <div class="card">
-                <img src="" alt="">
-                <h1>Adicione Saldo</h1>
-                <p class="paragraph">Você precisa adicionar saldo a sua conta através do PIX, o processo é automático e o saldo entra me no máximo 2 minutos</p>
+              <div>
+                <div class="card">
+                  <img src="assets/fotos/artes/saldo.png" alt="">
+                <div class="details">
+                  <h2>Adicione Saldo</h2>
+                  <p class="paragraph">Você precisa adicionar saldo a sua conta através do PIX, o processo é automático e o saldo entra me no máximo 2 minutos</p>
+                </div>
+                </div>
               </div>
-              <div class="card">
-                <img src="" alt="">
-                <h1>Escolha o País</h1>
-                <p class="paragraph">Temos mais de 180 países disponíveis para sua escolha</p>
+              <div>
+                <div class="card">
+                  <img src="assets/fotos/artes/pais.png" alt="">
+                <div class="details">
+                  <h2>Escolha o País</h2>
+                  <p class="paragraph">Temos mais de 180 países disponíveis para sua escolha</p>
+                </div>
+                </div>
               </div>
-              <div class="card">
-                <img src="" alt="">
-                <h1>Escolha o Serviço</h1>
-                <p class="paragraph">Selecione o serviço que você vai ativar, Whatsapp, Telegram, Facebook, Instagram …</p>
+              <div>
+                <div class="card">
+                  <img src="assets/fotos/artes/serviço.png" alt="">
+                <div class="details">
+                  <h2>Escolha o Serviço</h2>
+                  <p class="paragraph">Selecione o serviço que você vai ativar, Whatsapp, Telegram, Facebook, Instagram …</p>
+                </div>
+                </div>
               </div>
-              <div class="card">
-                <img src="" alt="">
-                <h1>Veja o Número Virtual</h1>
-                <p class="paragraph">Digite o número que aparece na tela no aplicativo a ser ativado, e apenas aguarde a chegada do sms.</p>
+              <div>
+                <div class="card">
+                  <img src="assets/fotos/artes/chip.png" alt="">
+                <div class="details">
+                  <h2>Veja o Número Virtual</h2>
+                  <p class="paragraph">Digite o número que aparece na tela no aplicativo a ser ativado, e apenas aguarde a chegada do sms.</p>
+                </div>
+                </div>
               </div>
-              <div class="card">
-                <img src="" alt="">
-                <h1>Receba o SMS</h1>
-                <p class="paragraph">Veja na Mensagem Recebida o código de ativação.</p>
+              <div>
+                <div class="card">
+                  <img src="assets/fotos/artes/sms.png" alt="">
+                <div class="details">
+                  <h2>Receba o SMS</h2>
+                  <p class="paragraph">Veja na Mensagem Recebida o código de ativação.</p>
+                </div>
+                </div>
               </div>
             </div>
           </div>
@@ -202,18 +233,85 @@
       <div class="divider-1"></div>
 
       <!-- FAQ -->
-      <section class="section" id="testimonials">
+      <section class="section" id="faq">
         <div class="wrapper">
           <div class="header">
             <h3>perguntas frequentes</h3>
             <h1>Quais são as principais duvidas dos nossos clientes</h1>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image">
+                <img src="assets/fotos/foto-testimonils.png" alt="">
+              </div>
+              <div class="details">
+                <h2>How do I change my account email?</h2>
+                <p>You can log in to your account and change it from your Profile > Edit Profile. Then go to the general tab to change your email.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="section">
-      <div class="wrapper"></div>
+      <div class="wrapper">
+        <div>
+          <img src="assets/fotos/logo-white.png" alt="Logo do ClickSMS">
+          <h2>©2023 ClickSMS.</h2>
+          <h2>Todos os direitos reservados.</h2>
+        </div>
+      </div>
     </footer>
 
     <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
