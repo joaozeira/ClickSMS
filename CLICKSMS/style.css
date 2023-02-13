@@ -36,12 +36,12 @@ img {
   --body-color: #f7f7f7;
 
   /* fonts */
-  --title-font: 4rem;
-  --secondary: 2.4rem;
+  --title-font: 3rem;
+  --secondary-font: 1.3rem;
   --subtitle-font: 1.6rem;
 
   --title-font-size: 2rem;
-  --secondary-font: 1rem;
+  --secondary-font-size: 1rem;
   --subtitle-font-size: 1.2rem;
 
   --radius: 1rem;
@@ -95,10 +95,11 @@ body {
   font: 500 1rem var(--secondary-font);
   transition: background 0.3s;
   text-transform: uppercase;
+  border: 1px solid var(--body-color);
 }
 
 .button:hover {
-  background: var(--base-color-alt);
+  background: var(--hover-brand-blue);
 }
 
 .divider-1 {
@@ -112,7 +113,6 @@ body {
 
 /*====  LAYOUT ============================ */
 .wrapper {
-  background-color: red;
   width: min(45rem, 100%);
 
   margin-left: 1.5rem;
@@ -146,7 +146,7 @@ body {
   background-color: var(--body-color);
   width: 100%;
 }
-
+/*  */
 #header .logoazul {
   display: flex;
   width: 9rem;
@@ -168,6 +168,11 @@ body {
 #header.scroll .logo img {
   display: flex;
   width: 9rem;
+}
+
+#header.scroll .title-menu {
+  color: var(--body-color);
+  font-size: var(--subtitle-font-size);
 }
 
 #header.scroll .icon-menu {
@@ -222,12 +227,12 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 2px;
-  background: var(--body-color);
+  background: var(--brand-blue);
 
   position: absolute;
   left: 0;
   bottom: -1.5rem;
-
+  
   transition: width 0.2s;
 }
 
@@ -246,6 +251,7 @@ nav .menu {
 .title-menu {
   color: var(--body-color);
   font-size: var(--subtitle-font-size);
+  color: var(--brand-blue);
 }
 
 nav .menu ul {
@@ -300,7 +306,7 @@ nav .icon-close {
   right: 1.5rem;
 
   transition: 0.2s;
-  color: var(--body-color);
+  color: var(--brand-blue);
 }
 
 nav.show div.icon-close {
@@ -396,6 +402,10 @@ nav.show div.icon-close {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  -webkit-box-shadow: -9px 10px 20px -8px rgba(0,0,0,0.61);
+-moz-box-shadow: -9px 10px 20px -8px rgba(0,0,0,0.61);
+box-shadow: -9px 10px 20px -8px rgba(0,0,0,0.61);
 }
 
 #how .card img {
@@ -410,6 +420,7 @@ nav.show div.icon-close {
 }
 
 #how .card .details h2 {
+  color: var(--brand-blue);
   font-size: 1.5rem;
 }
 
@@ -435,11 +446,16 @@ nav.show div.icon-close {
   background-color: #ffffff;
   padding: 1rem;
   width: 20rem;
+  -webkit-box-shadow: -9px 10px 20px -8px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: -9px 10px 20px -8px rgba(0, 0, 0, 0.61);
+  box-shadow: -9px 10px 20px -8px rgba(0, 0, 0, 0.61);
 }
 
 #faq .card .image {
   display: flex;
-  height: 100%;
+  width: 100%;
+  justify-content: left;
+  height: 5rem;
   padding: 1rem 0 1rem 0;
 }
 
@@ -510,20 +526,19 @@ footer h2 {
 
   /* image */
   .image img {
-    height: 80%;
+    max-height: 25rem;
+    height: 90%;
     width: 25rem;
   }
 
   /* HOME */
   #home .wrapper {
-    background-color: red;
     height: 30rem;
 
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
   }
- 
 
   #home .text {
     display: flex;
@@ -534,11 +549,11 @@ footer h2 {
     text-align: left;
   }
 
-  #home .image img{
+  #home .image img {
     margin-top: var(--margin);
-  } 
+  }
 
-  #home .text .button{
+  #home .text .button {
     display: flex;
     width: 22rem;
     align-items: center;
@@ -546,36 +561,79 @@ footer h2 {
   }
 
   /* ABOUT */
+  #about .wrapper {
+    justify-content: space-around;
+  }
 
-  #about div {
+  #about .content {
     display: flex;
+    justify-content: space-around;
     flex-direction: row-reverse;
   }
 
   #about .header {
+    width: 50%;
     display: flex;
     flex-direction: column;
   }
 
   /* MOTIVOS */
-  #motivos div {
+
+  #motivos .content {
     display: flex;
+    justify-content: space-around;
+    flex-direction: row;
   }
 
   #motivos .header {
+    width: 50%;
     display: flex;
     flex-direction: column;
   }
 
-  /* FAQ */
+  #motivos .content .image img {
+    height: 25rem;
+  }
+
+  #motivos .header .details-check li {
+    height: 2rem;
+  }
+
+  /* SAIBA COMO */
+  #how .details-check li {
+    height: 2rem;
+  }
+  #how .header .paragraph {
+    text-align: left;
+  }
+
   #how .cards {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  #how .cardss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* FAQ */
+  #faq h1 {
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: var(--margin);
+  }
   #faq .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  #faq .card {
+    justify-content: center;
+    height: 15rem;
+    width: 100%;
   }
 }
 
@@ -583,6 +641,35 @@ footer h2 {
   .wrapper {
     width: min(80rem, 100%);
   }
+
+  .title {
+    font-size: var(--title-font-size);
+    margin-bottom: 1rem;
+  }
+
+  /* header */
+  .header {
+    color: var(--brand-blue);
+  }
+
+  .header h3 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .header h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* image */
+  .image img {
+    max-height: 30rem;
+    height: 90%;
+    width: 30rem;
+  }
+
   /* navigation */
   nav .menu {
     opacity: 1;
@@ -592,7 +679,9 @@ footer h2 {
 
   nav .menu ul {
     display: flex;
+    align-items: center;
     gap: 2rem;
+    color: var(--body-color);
   }
 
   nav .menu ul li a.title {
@@ -607,5 +696,123 @@ footer h2 {
 
   nav .icon-menu {
     display: none;
+  }
+
+  /* HOME */
+  #home .text .title {
+    width: 90%;
+    font-size: var(--title-font);
+  }
+
+  #home .text .paragraph {
+    width: 110%;
+  }
+
+  #home .image img {
+    margin-top: var(--margin);
+  }
+
+  #home .text .button {
+    display: flex;
+    width: 22rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ABOUT */
+
+  #about .header {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about .header h1 {
+    width: 60%;
+  }
+
+  #about .header p {
+    width: 85%;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* MOTIVOS */
+
+  #motivos .content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  #motivos .header {
+    height: 30rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #motivos .content .image img {
+    height: 30rem;
+  }
+
+  #motivos .header .details-check li {
+    height: 2rem;
+  }
+
+  #motivos .image img {
+    height: 30rem;
+  }
+
+  /* SAIBA COMO */
+  #how .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #how .header h1 {
+    font-size: 2.4rem;
+  }
+  #how .header .paragraph {
+    text-align: left;
+    color: var(--gray-paragraph);
+    margin-bottom: 0.5rem;
+    margin-top: 7rem;
+  }
+
+  #how .details-check li {
+    height: 2rem;
+  }
+
+  #how .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #how .card {
+    height: 15rem;
+    width: 12rem;
+    margin-top: 4rem;
+  }
+
+  #how .card img {
+    top: -6rem;
+  }
+
+  #how .card .details h2 {
+    font-size: 1rem;
+  }
+
+  #how .card .details p {
+    color: var(--brand-blue);
+    font-size: 0.8rem;
+  }
+
+  /*====  PERGUNTAS FREQUENTES ==== */
+  #faq .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

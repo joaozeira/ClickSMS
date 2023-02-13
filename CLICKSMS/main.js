@@ -33,7 +33,7 @@ function changeHeaderWhenScroll() {
 
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
-/* const scrollReveal = ScrollReveal({
+const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 700,
@@ -49,10 +49,10 @@ scrollReveal.reveal(
   footer .brand, footer .social
   `,
   { interval: 100 }
-) */
+) 
 
 /* Botão voltar para o topo */
-/* const backToTopButton = document.querySelector('.back-to-top')
+const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
   if (window.scrollY >= 560) {
@@ -60,10 +60,10 @@ function backToTop() {
   } else {
     backToTopButton.classList.remove('show')
   }
-} */
+}
 
 /* Menu ativo conforme a seção visível na página */
-/* const sections = document.querySelectorAll('main section[id]')
+const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
@@ -85,7 +85,7 @@ function activateMenuAtCurrentSection() {
         .classList.remove('active')
     }
   }
-} */
+} 
 
 /* When Scroll */
 window.addEventListener('scroll', function () {
