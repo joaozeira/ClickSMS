@@ -41,12 +41,12 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-  `#home .image, #home .text,
-  #about .image, #about .text,
-  #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
-  footer .brand, footer .social
+  `#home .text, #home .image, 
+  #about .image, #about .header,
+  #motivos .header, #motivos details-check li,
+  #how .header, #how .header li, #how .card,
+  #faq .header, #faq .card,
+  footer div
   `,
   { interval: 100 }
 ) 
@@ -93,3 +93,12 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+
+
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+	toggle.addEventListener('click', () => {
+		toggle.parentNode.classList.toggle('active');
+	});
+});
